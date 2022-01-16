@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="333-3339770_request-form-icon-statutory-registration-hd-png-download.png" />
+    <None Remove="5846.jpg" />
+    <None Remove="604-6041904_company-registration-png-transparent-png.png" />
+    <None Remove="—Pngtree—creative abstract open lock logo_3628086.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="333-3339770_request-form-icon-statutory-registration-hd-png-download.png" />
+    <Resource Include="5846.jpg" />
+    <Resource Include="604-6041904_company-registration-png-transparent-png.png" />
+    <Resource Include="—Pngtree—creative abstract open lock logo_3628086.png" />
+  </ItemGroup>
+
+</Project>

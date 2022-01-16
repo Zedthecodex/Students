@@ -1,0 +1,63 @@
+﻿<Window x:Class="Students.Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Students"
+        mc:Ignorable="d"
+        Title="Dashboard" Height="700" Width="1000">
+    <Grid>
+
+
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                <GradientStop Color="AliceBlue" Offset="0"/>
+                <GradientStop Color="DarkTurquoise" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Name ="Label_Subject" Content="Subject :" FontSize="17" HorizontalAlignment="Left" Margin="73,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,-1.805"/>
+        <Button Margin="209,87,754,564" FontSize="16" Click="Add_Subject_Click">+</Button>
+        
+        
+        <Label Name ="Label_Date" Content="Date :" FontSize="17" HorizontalAlignment="Left" Margin="358,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,-1.805"/>
+        <DatePicker HorizontalAlignment="Left" Margin="358,93,0,0" VerticalAlignment="Top" Height="45" Width="258"/>
+        <ComboBox Name ="Box_Subject" HorizontalAlignment="Left" Margin="73,93,0,0" VerticalAlignment="Top" Width="120">
+
+            <ComboBoxItem>C#</ComboBoxItem>
+            <ComboBoxItem>C++</ComboBoxItem>
+            <ComboBoxItem>Unity Game Design</ComboBoxItem>
+            <ComboBoxItem>Data Science</ComboBoxItem>
+            
+        </ComboBox>
+
+
+        <Label Name ="Label_Session" Content="Session :" FontSize="17" HorizontalAlignment="Left" Margin="733,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,-1.805"/>
+        <ComboBox Name ="Box_Session" HorizontalAlignment="Left" Margin="733,93,0,0" VerticalAlignment="Top" Width="120">
+
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+            <ComboBoxItem>6</ComboBoxItem>
+            <ComboBoxItem>7</ComboBoxItem>
+            <ComboBoxItem>8</ComboBoxItem>
+            <ComboBoxItem>9</ComboBoxItem>
+
+        </ComboBox>
+
+        <Button Name ="Button_Attend"  Margin="73,583,821,56"> Attend </Button>
+
+        <Button Name ="Button_Log_out"  Margin="747,583,147,56">Log out</Button>
+        
+        <DataGrid  Name ="Schedule_Datagrid" ItemsSource="{Binding}" Margin="73,143,147,133" CurrentCellChanged="DataGrid_Change">
+            <DataGrid.Columns>
+                <DataGridTextColumn/>
+                <DataGridCheckBoxColumn x:Name="Attend_Bool" Header="Attendance" IsThreeState="False" Binding="{Binding Attend_ToF}" />
+            </DataGrid.Columns>
+            <DataGrid.ItemBindingGroup>
+                <BindingGroup/>
+            </DataGrid.ItemBindingGroup>
+        </DataGrid>
+    </Grid>
+</Window>
